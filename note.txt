@@ -1,0 +1,49 @@
+Banco de dados.
+- Restaurante
+- categoria (do Restaurante)
+- produto ( produto vinculados ao Restaurante e a categoria)
+
+Restaurant:
+    id: string pk
+    name: string
+    slug: string
+    description: string
+    avatarImageUrl: string
+    coverImageUrl: string
+    createdAt: DateTime
+    updatedAt: DateTime
+
+MenuCategory:
+    id: string pk
+    restaurantId: string fk
+    name: string
+    createdAt: string
+    updatedAt: string
+
+Products:
+    id: string pk
+    name: string
+    description: string
+    preice: float
+    ingredients: string[]
+    restaurantId: string fk
+    menuCategoryId: string fk
+    createdAt: DateTime
+    updatedAt: DateTime
+
+OrderProducts:
+    id: string pk
+    productId: string fk
+    quantity: int
+    price: float
+    createdAt: DateTime
+    updatedAt: DateTime
+    orderId: string fk
+
+Order:
+    id: string pk
+    total: float
+    status: OrderStatus
+    consumptionMethod: OrderConsumptionMethod
+    createdAt: DateTime
+    updatedAt: DateTime
