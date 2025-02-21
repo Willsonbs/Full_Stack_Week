@@ -47,3 +47,5 @@ Order:
     consumptionMethod: OrderConsumptionMethod
     createdAt: DateTime
     updatedAt: DateTime
+
+
